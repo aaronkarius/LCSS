@@ -1,135 +1,160 @@
-"use client";
-import React from "react";
-import compute from "./lib/compute";
+import Link from "next/link";
+import Image from "next/image";
 
 const Home = () => {
-    const [firstString, setFirstString] = React.useState("");
-    const handleFirstString = e => {
-        setFirstString(e.target.value);
-    };
-
-    const [secondString, setSecondString] = React.useState("");
-    const handleSecondString = e => {
-        setSecondString(e.target.value);
-    };
-
-    const [constrained, setConstrained] = React.useState(false);
-    const handleConstrained = () => {
-        setConstrained(!constrained);
-    };
-
-    const [constraintString, setConstraintString] = React.useState("");
-    const handleConstraintString = e => {
-        setConstraintString(e.target.value);
-    };
-
-    const handleClear = () => {
-        setFirstString("");
-        setSecondString("");
-        setConstrained(false);
-        setConstraintString("");
-        setOutput("");
-    };
-
-    const handleCompute = () => {
-        compute(
-            firstString,
-            secondString,
-            constrained,
-            constraintString,
-            setOutput
-        );
-    };
-
-    const [output, setOutput] = React.useState("");
-
     return (
-        <div className="flex flex-col items-center justify-center h-full gap-12 p-12 bg-gray-100 dark:bg-gray-800">
-            <h1 className="text-xl font-bold tracking-tighter text-center lg:text-3xl">
-                {`The ${
-                    constrained ? "Constrained " : ""
-                }Longest Common Subsequence and Substring`}
-            </h1>
-            <div className="flex flex-wrap justify-center w-full gap-8">
-                <form
-                    className="flex flex-col gap-8 grow max-w-[500px]"
-                    onSubmit={e => e.preventDefault()}
+        <div className="flex flex-col items-center h-full gap-12 p-12 min-w-[350px]">
+            <div className="flex flex-col items-center justify-center gap-4">
+                <p className="text-xl font-bold tracking-tighter text-center lg:text-3xl">
+                    About CLCSS
+                </p>
+                <p className="max-w-[1000px] text-justify text-lg tracking-tighter">
+                    CLCSS was designed to showcase two algorithms: The Longest
+                    Common Subsequence and Substring (LCSS) and the Constrained
+                    Longest Common Subsequence and Substring (CLCSS). A
+                    subsequence is a sequence that appears in the same relative
+                    order, but not necessarily contiguous. A substring is a
+                    contiguous sequence within a string.
+                </p>
+                <div className="flex flex-wrap items-center w-full gap-12 justify-evenly">
+                    <div className="flex flex-col gap-6">
+                        <p className="text-lg font-bold tracking-tighter text-center lg:text-xl">
+                            Website Developer
+                        </p>
+                        <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                            <Image
+                                src="/aaron.jpg"
+                                width={50}
+                                height={50}
+                                alt="Portrait"
+                                className="rounded-full"
+                            />
+                            <div>Aaron Karius</div>
+                        </div>
+                    </div>
+                    <Link
+                        href="/try-it"
+                        className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md dark:bg-indigo-500 dark:hover:bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 max-h-[50px]"
+                    >
+                        Try it here!
+                    </Link>
+                </div>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-6 p-4 bg-gray-100 dark:bg-gray-800">
+                <p className="text-xl font-bold tracking-tighter text-center lg:text-2xl">
+                    The Longest Common Subsequence and Substring (LCSS)
+                </p>
+                <p className="max-w-[1000px] text-justify text-lg tracking-tighter">
+                    The Longest Common Subsequence and Substring (LCSS) problem
+                    is to find the longest common subsequence and substring of
+                    two strings.
+                </p>
+                <Link
+                    href="/lcss.pdf"
+                    target="_blank"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
-                    <div className="flex flex-col gap-4">
-                        <div>
-                            <label htmlFor="firstString">First String</label>
-                            <input
-                                type="text"
-                                id="firstString"
-                                className="input"
-                                placeholder="abxycdz"
-                                value={firstString}
-                                onChange={handleFirstString}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="secondString">Second String</label>
-                            <input
-                                type="text"
-                                id="secondString"
-                                className="input"
-                                placeholder="abczw"
-                                value={secondString}
-                                onChange={handleSecondString}
-                                required
-                            />
-                        </div>
-                        <div className="flex gap-2">
-                            <input
-                                type="checkbox"
-                                id="constrained"
-                                checked={constrained}
-                                onChange={handleConstrained}
-                            />
-                            <label htmlFor="constrained">Constrained</label>
-                        </div>
-                        {constrained && (
-                            <div>
-                                <label htmlFor="constraintString">
-                                    Constraint String
-                                </label>
-                                <input
-                                    type="text"
-                                    id="constraintString"
-                                    className="input"
-                                    placeholder="bz"
-                                    value={constraintString}
-                                    onChange={handleConstraintString}
-                                    required={constrained}
-                                />
-                            </div>
-                        )}
+                    Research Paper
+                </Link>
+                <p className="text-lg font-bold tracking-tighter text-center lg:text-xl">
+                    Algorithm Designers
+                </p>
+                <div className="flex flex-wrap w-full gap-12 justify-evenly">
+                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                        <Image
+                            src="/rao.jpg"
+                            width={50}
+                            height={50}
+                            alt="Portrait"
+                            className="rounded-full"
+                        />
+                        <div>Rao Li</div>
                     </div>
-                    <div className="flex gap-4">
-                        <button
-                            className="bg-indigo-600 button dark:bg-indigo-500 dark:hover:bg-indigo-600 hover:bg-indigo-700"
-                            onClick={handleCompute}
-                        >
-                            Compute
-                        </button>
-                        <button
-                            className="bg-gray-400 button dark:bg-gray-500 dark:hover:bg-gray-600 hover:bg-gray-500"
-                            onClick={handleClear}
-                        >
-                            Clear
-                        </button>
+                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                        <Image
+                            src="/j-deka.jpg"
+                            width={50}
+                            height={50}
+                            alt="Portrait"
+                            className="rounded-full"
+                        />
+                        <div>Jyotishmoy Deka</div>
                     </div>
-                </form>
-                <div className="flex flex-col grow max-w-[500px]">
-                    <label htmlFor="output">Output</label>
-                    <textarea
-                        id="output"
-                        className="flex resize-none input grow min-h-[200px]"
-                        placeholder="Please enter in some strings to test and hit compute."
-                        readOnly
-                        value={output}
-                    />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                        <Image
+                            src="/k-deka.jpg"
+                            width={50}
+                            height={50}
+                            alt="Portrait"
+                            className="rounded-full"
+                        />
+                        <div>Kaushik Deka</div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-6 p-4 bg-gray-100 dark:bg-gray-800">
+                <p className="text-xl font-bold tracking-tighter text-center lg:text-2xl">
+                    The Constrained Longest Common Subsequence and Substring
+                    (CLCSS)
+                </p>
+                <p className="max-w-[1000px] text-justify text-lg tracking-tighter">
+                    The Constrained Longest Common Subsequence and Substring
+                    (CLCSS) problem is to find the longest common subsequence
+                    and substring of two strings, subject to the constraint that
+                    the common subsequence and substring should contain a
+                    specified set of characters.
+                </p>
+                <Link
+                    href="/clcss.pdf"
+                    target="_blank"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                    Research Paper
+                </Link>
+                <p className="text-lg font-bold tracking-tighter text-center lg:text-xl">
+                    Algorithm Designers
+                </p>
+                <div className="flex flex-wrap w-full gap-12 justify-evenly">
+                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                        <Image
+                            src="/rao.jpg"
+                            width={50}
+                            height={50}
+                            alt="Portrait"
+                            className="rounded-full"
+                        />
+                        <div>Rao Li</div>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                        <Image
+                            src="/j-deka.jpg"
+                            width={50}
+                            height={50}
+                            alt="Portrait"
+                            className="rounded-full"
+                        />
+                        <div>Jyotishmoy Deka</div>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                        <Image
+                            src="/k-deka.jpg"
+                            width={50}
+                            height={50}
+                            alt="Portrait"
+                            className="rounded-full"
+                        />
+                        <div>Kaushik Deka</div>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
+                        <Image
+                            src="/dorothy.jpg"
+                            width={50}
+                            height={50}
+                            alt="Portrait"
+                            className="rounded-full"
+                        />
+                        <div>Dorothy Li</div>
+                    </div>
                 </div>
             </div>
         </div>
