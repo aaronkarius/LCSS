@@ -8,7 +8,7 @@ const Home = () => {
                 <p className="text-xl font-bold tracking-tighter text-center lg:text-3xl">
                     About CLCSS
                 </p>
-                <p className="max-w-[1000px] text-justify text-lg tracking-tighter">
+                <p className="max-w-[1000px] text-justify text-lg">
                     CLCSS was designed to showcase two algorithms: The Longest
                     Common Subsequence and Substring (LCSS) and the Constrained
                     Longest Common Subsequence and Substring (CLCSS). A
@@ -44,7 +44,7 @@ const Home = () => {
                 <p className="text-xl font-bold tracking-tighter text-center lg:text-2xl">
                     The Longest Common Subsequence and Substring (LCSS)
                 </p>
-                <p className="max-w-[1000px] text-justify text-lg tracking-tighter">
+                <p className="max-w-[1000px] text-justify text-lg">
                     The Longest Common Subsequence and Substring (LCSS) problem
                     is to find the longest common subsequence and substring of
                     two strings.
@@ -97,7 +97,7 @@ const Home = () => {
                     The Constrained Longest Common Subsequence and Substring
                     (CLCSS)
                 </p>
-                <p className="max-w-[1000px] text-justify text-lg tracking-tighter">
+                <p className="max-w-[1000px] text-justify text-lg">
                     The Constrained Longest Common Subsequence and Substring
                     (CLCSS) problem is to find the longest common subsequence
                     and substring of two strings, subject to the constraint that
