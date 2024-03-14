@@ -21,14 +21,7 @@ const Home = () => {
                         <p className="text-lg font-bold tracking-tighter text-center lg:text-xl">
                             Website Developer
                         </p>
-                        <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                            <Image
-                                src="/aaron.jpg"
-                                width={50}
-                                height={50}
-                                alt="Portrait"
-                                className="rounded-full"
-                            />
+                        <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-gray-100 dark:bg-gray-800">
                             <div>Aaron Karius</div>
                         </div>
                     </div>
@@ -60,34 +53,13 @@ const Home = () => {
                     Algorithm Designers
                 </p>
                 <div className="flex flex-wrap w-full gap-12 justify-evenly">
-                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                        <Image
-                            src="/rao.jpg"
-                            width={50}
-                            height={50}
-                            alt="Portrait"
-                            className="rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-white dark:bg-black">
                         <div>Rao Li</div>
                     </div>
-                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                        <Image
-                            src="/j-deka.jpg"
-                            width={50}
-                            height={50}
-                            alt="Portrait"
-                            className="rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-white dark:bg-black">
                         <div>Jyotishmoy Deka</div>
                     </div>
-                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                        <Image
-                            src="/k-deka.jpg"
-                            width={50}
-                            height={50}
-                            alt="Portrait"
-                            className="rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-white dark:bg-black">
                         <div>Kaushik Deka</div>
                     </div>
                 </div>
@@ -115,44 +87,16 @@ const Home = () => {
                     Algorithm Designers
                 </p>
                 <div className="flex flex-wrap w-full gap-12 justify-evenly">
-                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                        <Image
-                            src="/rao.jpg"
-                            width={50}
-                            height={50}
-                            alt="Portrait"
-                            className="rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-white dark:bg-black">
                         <div>Rao Li</div>
                     </div>
-                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                        <Image
-                            src="/j-deka.jpg"
-                            width={50}
-                            height={50}
-                            alt="Portrait"
-                            className="rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-white dark:bg-black">
                         <div>Jyotishmoy Deka</div>
                     </div>
-                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                        <Image
-                            src="/k-deka.jpg"
-                            width={50}
-                            height={50}
-                            alt="Portrait"
-                            className="rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-white dark:bg-black">
                         <div>Kaushik Deka</div>
                     </div>
-                    <div className="flex flex-col items-center gap-1 min-w-[150px]">
-                        <Image
-                            src="/dorothy.jpg"
-                            width={50}
-                            height={50}
-                            alt="Portrait"
-                            className="rounded-full"
-                        />
+                    <div className="flex flex-col items-center gap-1 min-w-[150px] border rounded-md bg-white dark:bg-black">
                         <div>Dorothy Li</div>
                     </div>
                 </div>
