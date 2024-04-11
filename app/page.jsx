@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const Home = () => {
     return (
@@ -39,8 +38,8 @@ const Home = () => {
                 </p>
                 <p className="max-w-[1000px] text-justify text-lg">
                     The Longest Common Subsequence and Substring (LCSS) problem
-                    is to find the longest common subsequence and substring of
-                    two strings.
+                    for two strings X and Y is to find the longest string Z
+                    which is a subsequence of X and a substring of Y.
                 </p>
                 <Link
                     href="/lcss.pdf"
@@ -71,10 +70,10 @@ const Home = () => {
                 </p>
                 <p className="max-w-[1000px] text-justify text-lg">
                     The Constrained Longest Common Subsequence and Substring
-                    (CLCSS) problem is to find the longest common subsequence
-                    and substring of two strings, subject to the constraint that
-                    the common subsequence and substring should contain a
-                    specified set of characters.
+                    (CLCSS) problem for two strings X and Y and a constrained
+                    string P is to find the longest string Z such that Z is a
+                    subsequence of X, a substring of Y , and has P as a
+                    subsequence.
                 </p>
                 <Link
                     href="/clcss.pdf"
