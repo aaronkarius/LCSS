@@ -5,12 +5,13 @@ const Home = () => {
         <div className="flex flex-col items-center h-full gap-12 p-12 min-w-[350px]">
             <div className="flex flex-col items-center justify-center gap-4">
                 <p className="text-xl font-bold tracking-tighter text-center lg:text-3xl">
-                    About CLCSS
+                    About This Website
                 </p>
                 <p className="max-w-[1000px] text-justify text-lg">
-                    CLCSS was designed to showcase two algorithms: The Longest
-                    Common Subsequence and Substring (LCSS) and the Constrained
-                    Longest Common Subsequence and Substring (CLCSS). A
+                    This website was designed to showcase two algorithms: the
+                    first one is on the Longest Common Subsequence and Substring
+                    (LCSS) problem and the second one is on the Constrained
+                    Longest Common Subsequence and Substring (CLCSS) problem. A
                     subsequence is a sequence that appears in the same relative
                     order, but not necessarily contiguous. A substring is a
                     contiguous sequence within a string.
